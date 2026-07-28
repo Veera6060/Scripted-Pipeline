@@ -1,4 +1,4 @@
-inode ('built-in') {
+node ('built-in') {
 
     stage ('continuos download')
     {
