@@ -2,7 +2,7 @@ inode ('built-in') {
 
     stage ('continuos download')
     {
-        git branch: 'main', url: 'https://github.com/sysgeeks4u/Functional-Testing.git'
+        git branch: 'main', url: 'https://github.com/Veera6060/Scripted-Pipeline.git'
     }
     stage('continuos build')
     {
