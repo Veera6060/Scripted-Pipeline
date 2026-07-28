@@ -13,7 +13,7 @@ inode ('built-in') {
         deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'QASERVER', path: '', url: 'http://172.31.0.104:8080')], contextPath: 'testapp', war: '**/*.war'
     }
     stage('continuos test')
-    {
+    {i
         git branch: 'main', url: 'https://github.com/sysgeeks4u/Functional-Testing.git'
         sh 'java -jar /var/lib/jenkins/workspace/Scripted-Pipeline/testing.jar'
 
