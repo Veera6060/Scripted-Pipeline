@@ -3,7 +3,7 @@ inode ('built-in') {
     stage ('continuos download')
     {
         git branch: 'main', url: 'https://github.com/Veera6060/Scripted-Pipeline.git'
-    }
+   }
     stage('continuos build')
     {
         sh 'mvn package'
@@ -12,14 +12,4 @@ inode ('built-in') {
     {
         deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'QASERVER', path: '', url: 'http://172.31.0.104:8080')], contextPath: 'testapp', war: '**/*.war'
     }
-    stage('continuos test')
-    {i
-        git branch: 'main', url: 'https://github.com/sysgeeks4u/Functional-Testing.git'
-        sh 'java -jar /var/lib/jenkins/workspace/Scripted-Pipeline/testing.jar'
-
-    }
-    stage('continuos deploy')
-    {
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'PRODSERVER', path: '', url: 'http://172.31.39.47:8080')], contextPath: 'prodapp', war: '**/*.war'
-    }
-}
+   }
