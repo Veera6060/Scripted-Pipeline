@@ -8,8 +8,5 @@ node ('built-in') {
     {
         sh 'mvn package'
     }
-    stage('continuos delivery')
-    {
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'QASERVER', path: '', url: 'http://172.31.0.104:8080')], contextPath: 'testapp', war: '**/*.war'
-    }
+   
    }
