@@ -1,8 +1,8 @@
-node ('built-in') {
+inode ('built-in') {
 
     stage ('continuos download')
     {
-        git branch: 'main', url: 'https://github.com/Veera6060/Scripted-Pipeline.git'
+        git branch: 'main', url: 'https://github.com/sysgeeks4u/Functional-Testing.git'
     }
     stage('continuos build')
     {
