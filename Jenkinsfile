@@ -6,7 +6,7 @@ node('built-in')
     }
      stage('Continuous Build') 
     {
-      echo 'No Maven project found. Skipping build.'
+     sh 'mvn package'
     }
 
 }
